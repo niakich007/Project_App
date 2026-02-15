@@ -1,0 +1,91 @@
+name: project_one
+description: "Новый Flutter проект."
+# Следующая строка предотвращает случайную публикацию пакета на pub.dev
+# с помощью команды `flutter pub publish`. Рекомендуется для приватных пакетов.
+publish_to: 'none' # Удалите эту строку, если хотите публиковать на pub.dev
+
+# Определяет версию и номер сборки для вашего приложения.
+# Номер версии состоит из трёх чисел, разделённых точками, например 1.2.43
+# и необязательного номера сборки, отделяемого знаком +.
+# Номер версии и номер сборки можно переопределить при сборке Flutter
+# с помощью --build-name и --build-number соответственно.
+# В Android build-name используется как versionName, а build-number как versionCode.
+# Подробнее про версионирование в Android: https://developer.android.com/studio/publish/versioning
+# В iOS build-name используется как CFBundleShortVersionString, а build-number как CFBundleVersion.
+# Подробнее про версионирование в iOS:
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# В Windows build-name используется для major, minor и patch версий,
+# а build-number для суффикса сборки.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.4 # Минимальная версия SDK Dart, требуемая проектом
+
+# Зависимости — это другие пакеты, которые нужны вашему проекту для работы.
+# Для автоматического обновления зависимостей до последних версий
+# используйте `flutter pub upgrade --major-versions`.
+# Также версии можно обновлять вручную, меняя числа версий ниже.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Добавляет шрифт Cupertino Icons для iOS-стиля иконок
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.0.10 # Поддержка SVG графики
+  supabase_flutter: ^2.12.0 # Supabase для работы с базой данных и аутентификацией
+  path_provider: ^2.1.0 # Доступ к файловой системе устройства
+  http: ^1.1.0 # HTTP запросы
+  file_picker: ^10.3.8 # Выбор файлов пользователем
+  just_audio: ^0.9.39   # Воспроизведение аудио
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter # Тестирование Flutter
+
+  # Пакет "flutter_lints" содержит набор правил линтинга для хороших практик
+  # Набор активируется в файле `analysis_options.yaml` в корне проекта.
+  flutter_lints: ^6.0.0
+
+# Для информации о Dart-части этого файла:
+# https://dart.dev/tools/pub/pubspec
+
+# Раздел, специфичный для Flutter
+flutter:
+
+  # Эта строка гарантирует, что шрифт Material Icons будет включён
+  # и доступен через класс Icons.
+  uses-material-design: true
+
+  # Добавление ресурсов (иконок, изображений) для приложения
+  assets:
+    - assets/icons/app_icons.svg
+    - assets/icons/image_icons.svg
+    - assets/icons/music_icons.svg
+    - assets/icons/people_icons.svg
+    - assets/icons/profile_icons.svg
+    - assets/icons/play.svg
+    - assets/icons/stop.svg
+    - assets/icons/pause.svg
+
+  # Изображения могут иметь несколько вариантов для разных разрешений
+  # Подробнее: https://flutter.dev/to/resolution-aware-images
+
+  # Для добавления ресурсов из зависимостей пакетов:
+  # https://flutter.dev/to/asset-from-package
+
+  # Для добавления кастомных шрифтов, используйте раздел fonts
+  # Каждая запись должна содержать family и fonts с указанием asset и других свойств
+  # Пример:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # Шрифты из зависимостей пакетов: https://flutter.dev/to/font-from-package
