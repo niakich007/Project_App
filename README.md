@@ -1,16 +1,33 @@
 # project_one
 
-A new Flutter project.
+Учебный проект на Flutter.  
+Данный проект создан в качестве учебного пособия для изучения Flutter и Supabase. Все файлы и экраны предназначены для практического освоения основных концепций разработки мобильных приложений на Flutter.
 
-## Getting Started
+## Цель проекта
 
-This project is a starting point for a Flutter application.
+- Познакомить с архитектурой Flutter-приложений.
+- Научиться работать с состоянием приложения и контроллерами.
+- Изучить работу с пользовательским вводом через `TextField` и кастомные виджеты.
+- Освоить интеграцию с Supabase: регистрация, авторизация, работа с таблицами базы данных.
+- Понять основы анимации и кастомного UI (FadeTransition, ScaleTransition, стеклянные контейнеры).
 
-A few resources to get you started if this is your first Flutter project:
+## Содержимое проекта
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- `main.dart` — точка входа в приложение.  
+- `auth_screen.dart` — экран авторизации и регистрации пользователя.  
+- `profile_edit_screen.dart` — экран редактирования профиля и логина пользователя.  
+- `splash_screen.dart` — экран-заставка с анимацией.  
+- `app_design.dart` — стили, цвета, кастомные кнопки и контейнеры для приложения.  
+- `home_screen.dart`, `main_screen.dart` — экраны после авторизации.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Теоретическая часть
+
+В этом проекте изучаются следующие концепции:
+
+1. **StatefulWidget и StatelessWidget** — разница между виджетами с состоянием и без него.  
+2. **Контроллеры текста (`TextEditingController`)** — управление текстовыми полями, считывание и изменение значений.  
+3. **Supabase** — бэкенд как сервис, поддержка авторизации, регистрация и работа с базой данных через `from().select()`, `insert()`, `update()`.  
+4. **Асинхронное программирование (`Future`, `async/await`)** — работа с сетевыми запросами и обработка результатов.  
+5. **Анимации в Flutter** — использование `AnimationController`, `FadeTransition`, `ScaleTransition` для плавного появления и увеличения виджетов.  
+6. **Кастомный UI** — создание стеклянных контейнеров (`AppGlass.container`), кнопок (`AppButtons.primary`) и стилизованных полей ввода (`_InputField`).  
+7. **Работа с навигацией** — переход между экранами, возврат данных при закрытии экрана (`Navigator.pop(context, newLogin)`).
